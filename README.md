@@ -1,0 +1,1 @@
+# Smart-Retail-Product-Detection-and-Analysis-Using-YOLOv8-and-Hand-Keypoint-Detection
