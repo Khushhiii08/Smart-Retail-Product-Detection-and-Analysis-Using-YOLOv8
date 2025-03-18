@@ -71,6 +71,7 @@ This project aims to develop a smart retail product detection system using compu
 ![WhatsApp Image 2025-03-18 at 09 04 12_217c7880](https://github.com/user-attachments/assets/feefc4c7-ea72-4231-928a-6739b1f0a205)
 
 Dataset Used:
+
 We implemented a small, 936 images, self-built images dataset on our project. We couldn't find any good store CCTV footage online that could be used to train the model with real-world data, so we relied on publicly available images of store items and simulated interactions like picking and placing products in a cart. However, not many relevant images were available online, out of which not all could be used for training, and the quality and compatibility of the chosen images varied significantly, resulting in a limited and inconsistent dataset for training YOLOv8.
 
 link: https://drive.google.com/drive/folders/18O4x3QUO2-m8umWrZw9lQgj_B6JjR2gd?usp=sharing
