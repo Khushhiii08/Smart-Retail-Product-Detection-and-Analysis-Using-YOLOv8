@@ -1,4 +1,4 @@
-# Smart-Retail-Product-Detection-and-Analysis-Using-YOLOv8-and-Hand-Keypoint-Detection
+# Smart-Retail-Product-Detection-and-Analysis-Using-YOLOv8
 
 GDG OnCampus VIT-AP AI/ML & Data Analytics Team - Team id: 3 
 
@@ -8,7 +8,7 @@ Dhani Sinha 24BCE7569,
 Ramsha Annam 23BCE8215
 
 
-This project aims to develop a smart retail product detection system using computer vision to detect products picked by customers in a retail store environment. The system leverages two YOLOv8 models to detect grocery items and hand. By identifying hand-to-product interactions, it can accurately determine which products customers have picked. The solution integrates with a Flask-based web application, allowing users to upload videos or images for product and hand detection. The system processes these inputs in real time, stores the results in a database, and provides actionable insights on customer behaviour.
+This project aims to develop a smart retail product detection system using computer vision to detect products picked by customers in a retail store environment. The system leverages two YOLOv8 models to detect grocery items, hand, store basket and trolly. By identifying hand-to-product and product-to-store-basket-or-trolly interactions, it can accurately determine which products customers have picked. The solution integrates with a Flask-based web application, allowing users to upload videos or images for product and hand detection. The system processes these inputs in real time, stores the results in a database, and provides actionable insights into customer behaviour.
 
 
 ⚙️ Project Modules:
@@ -51,7 +51,7 @@ This project aims to develop a smart retail product detection system using compu
 
 3. Detection and Analysis:  
    - YOLOv8 models detect grocery items and hand.
-   - If 5 or more of the hand overlap with a product’s bounding box, it is marked as "picked."
+   - If the box boundary of a hand overlap with a product’s bounding box, and later that of a product with a store basket or trolly, it is marked as "picked."
 
 4. Data Storage: 
    - Detected actions and product information are stored in a SQLite database.
@@ -72,14 +72,16 @@ This project aims to develop a smart retail product detection system using compu
 
 Dataset Used:
 
-We implemented a small, 936 images, self-built images dataset on our project. We couldn't find any good store CCTV footage online that could be used to train the model with real-world data, so we relied on publicly available images of store items and simulated interactions like picking and placing products in a cart. However, not many relevant images were available online, out of which not all could be used for training, and the quality and compatibility of the chosen images varied significantly, resulting in a limited and inconsistent dataset for training YOLOv8.
+We initially integrated a dataset we found online with 6000 images of Indian products, manually taken and labelled. Still, the results didn't come out great so we then implemented a small, 936 images, self-built images dataset on our project. We couldn't find any good store CCTV footage online that could be used to train the model with real-world data, so we relied on publicly available images of store items and simulated interactions like picking and placing products in a cart. However, not many relevant images were available online, out of which not all could be used for training, and the quality and compatibility of the chosen images varied significantly, resulting in a limited and inconsistent dataset for training YOLOv8.
 
-link: https://drive.google.com/drive/folders/18O4x3QUO2-m8umWrZw9lQgj_B6JjR2gd?usp=sharing
+link: 
+1) 6000 images dataset: https://universe.roboflow.com/iit-patna-qg1jh/grocery_items-7i2em
+2) self-built dataset: https://drive.google.com/drive/folders/18O4x3QUO2-m8umWrZw9lQgj_B6JjR2gd?usp=sharing
 
 References:
 Research papers-
 
-• Retail store customer behavior analysis system: Design and Implementation by Tuan Dinh Nguyena, Keisuke Hiharab, Tung Cao Hoanga, Yumeka Utadab, Akihiko Toriib,Naoki Izumib, Nguyen Thanh Thuya and Long Quoc Trana,∗
+• Retail store customer behaviour analysis system: Design and Implementation by Tuan Dinh Nguyen, Keisuke Hiharab, Tung Cao Hoanga, Yumeka Utadab, Akihiko Toriib, Naoki Izumib, Nguyen Thanh Thuya and Long Quoc Trana,∗
 
 • Retail Store Analytics Using Facial Recognition by Nishant Sawant, Akansha Rai, Saiprasad Parab, Bansi Ghanva
 
