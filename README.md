@@ -68,7 +68,8 @@ This project aims to develop a smart retail product detection system using compu
 
 
  Architectural diagram:
-![WhatsApp Image 2025-03-18 at 09 04 12_217c7880](https://github.com/user-attachments/assets/feefc4c7-ea72-4231-928a-6739b1f0a205)
+![I](https://github.com/user-attachments/assets/3d4b251c-7733-42ac-9e9e-335195318b07)
+
 
 Dataset Used:
 
